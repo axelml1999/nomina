@@ -30,7 +30,7 @@ class CreateEmpleadosTable extends Migration
             $table->timestamps();
             $table->foreign('turno_id')->references('id')->on('turnos');
             $table->foreign('cargo_id')->references('id')->on('cargos');
-            $table->foreign('departamento_id')->references('id')->on('deapartamentos');
+            $table->foreign('departamento_id')->references('id')->on('departamentos');
             $table->foreign('pago_id')->references('id')->on('pagos');
             $table->foreign('sexo_id')->references('id')->on('sexos');
         });
