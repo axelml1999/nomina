@@ -1,4 +1,10 @@
-html,
+<head>
+<link rel="Styleheet" href='/resources/css/app.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>html,
 body {
   min-height: 100%;
   font-family: Oxygen;
@@ -7,11 +13,11 @@ body {
   color: #fff;
 }
 body {
-  background: #2e3441;
-  background-image: -webkit-radial-gradient(top, circle cover, #4e7a89, #2e3441 80%);
-  background-image: -moz-radial-gradient(top, circle cover, #4e7a89, #2e3441 80%);
-  background-image: -o-radial-gradient(top, circle cover, #4e7a89, #2e3441 80%);
-  background-image: radial-gradient(top, circle cover, #4e7a89, #2e3441 80%);
+  background: #000000;
+  background-image: -webkit-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
+  background-image: -moz-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
+  background-image: -o-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
+  background-image: radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -175,4 +181,5 @@ input[type="checkbox"]:checked + label:after {
 }
 .cf {
   *zoom: 1;
-}
+}</style>
+</head>
