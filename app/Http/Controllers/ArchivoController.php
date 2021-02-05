@@ -29,4 +29,13 @@ class ArchivoController extends Controller
     public function tablados(){
         return view('tablados');
     }
+    public function asistencias(){
+        return view('asistencias');
+    }
+    public function nominaindividual(){
+        return view('nominaindividual');
+    }
+    public function nominageneral(){
+        return view('nominageneral');
+    }
 }

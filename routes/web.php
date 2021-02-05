@@ -31,3 +31,8 @@ Route::get('pago', 'App\Http\Controllers\ArchivoController@pago');
 Route::get('departamento', 'App\Http\Controllers\ArchivoController@departamento');
 Route::get('tabla', 'App\Http\Controllers\ArchivoController@tabla');
 Route::get('tablados', 'App\Http\Controllers\ArchivoController@tablados');
+
+
+Route::get('nominageneral', 'App\Http\Controllers\ArchivoController@nominageneral');
+Route::get('nominaindividual', 'App\Http\Controllers\ArchivoController@nominaindividual');
+Route::get('asistencias', 'App\Http\Controllers\ArchivoController@asistencias');
