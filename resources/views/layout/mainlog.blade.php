@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('layout.header')
-@include('layout.nav')
+@include('layout.headerlog')
 <body>
     @yield('content')
 </body>

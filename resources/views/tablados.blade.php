@@ -1,44 +1,18 @@
-<header>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</header>
-
-<style>
-.container1{
-    background-color: #ff2b2b;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.ul{
-    
-}
-
-}
-</style>
-
 @extends('layout.main')
-
 @section('content')
-<body>
-<div class="container1">
-<h1>Modulo de Pago</h1>
-<ul class="nav nav-pills">
-  <li class="active"><a href="#"></a></li>
-  <li><a href="/empleados">Registro</a></li>
-  <br>
-  <li><a href="/tablados"> &nbsp;&nbsp;&nbsp;Tabla</a></li>
-</ul>
-</div>
-
-<div class="container">
-  <h2>Empleados</h2>          
+<div class="container pt-5">
+  <div class="container1">
+    <h1>Modulo de Pago</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/empleados">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/tablados">Empleados</a>
+      </li>
+    </ul>
+  </div>
+  <h2 class="pt-4">Empleados</h2>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -75,13 +49,9 @@
       </tr>
     </tbody>
   </table>
+
+  <button type="button" class="btn btn-dark">Eliminar</button>
 </div>
-
-
-<button type="button" class="btn btn-dark">Eliminar</button>
-
-</body>
-</html>
 
 
 

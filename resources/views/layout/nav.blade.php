@@ -1,62 +1,27 @@
-<style>
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #0275d8;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index">Nomina</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-</style>
-    <a href="/index">Home</a>
-
-<div class="dropdown">
-  <button class="dropbtn">Archivo</button>
-  <div class="dropdown-content">
-
-    <a href="/empleados">Empleados</a>
-    <a href="/horarios">Horarios</a>
-    <a href="/cargo">Cargo</a>
-    <a href="departamento">Departamento</a>
-    <a href="/pago">Pago</a>
-  </div>
-</div>  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Archivo
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="nominageneral">Nómina General</a>
+            <a class="dropdown-item" href="nominaindividual">Nomina Individual</a>
+            <a class="dropdown-item" href="asistencias">Asistencias</a>
+            <a class="dropdown-item" href="empleados">Empleados</a>
+            <a class="dropdown-item" href="cargo">Cargo</a>
+            <a class="dropdown-item" href="departamento">Departamento</a>
+            <a class="dropdown-item" href="horarios">Horarios</a>
+            <a class="dropdown-item" href="pago">Pago</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+</nav>
  

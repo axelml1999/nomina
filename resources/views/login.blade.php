@@ -1,7 +1,7 @@
-@extends('layout.main')
+@extends('layout.mainlog')
+
 @section('content')
-<link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css"/>
-<link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+
 <div class="signin cf">
   <div class="avatar"></div>
   <form>
@@ -15,7 +15,7 @@
     </div>
     <input id="remember" type="checkbox" name="remember"/>
     <label class="radio" for="remember">Stay Logged In</label>
-    <input type="submit" value="Login"/>
+    <a class="btn btn-primary" href="asistencias" role="button">Login</a>
   </form>
 </div>
-    @endsection
+@endsection

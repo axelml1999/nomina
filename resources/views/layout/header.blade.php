@@ -1,185 +1,21 @@
 <head>
-<link rel="Styleheet" href='/resources/css/app.css'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <style>html,
-body {
-  min-height: 100%;
-  font-family: Oxygen;
-  font-weight: 300;
-  font-size: 1em;
-  color: #fff;
-}
-body {
-  background: #000000;
-  background-image: -webkit-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
-  background-image: -moz-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
-  background-image: -o-radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
-  background-image: radial-gradient(top, circle cover, #288e3d, #6b2b2bba 80%);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.signin {
-  display: block;
-  position: relative;
-  width: 250px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.1);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 1px 1px 0 0 rgba(255,255,255,0.2), inset -1px -1px 0 0 rgba(0,0,0,0.2);
-  -moz-box-shadow: inset 1px 1px 0 0 rgba(255,255,255,0.2), inset -1px -1px 0 0 rgba(0,0,0,0.2);
-  box-shadow: inset 1px 1px 0 0 rgba(255,255,255,0.2), inset -1px -1px 0 0 rgba(0,0,0,0.2);
-}
-.signin .avatar {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 35px auto;
-  border: 5px solid #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-pointer-events: none;
-  -moz-pointer-events: none;
-  pointer-events: none;
-}
-.signin .avatar:before {
-  content: "\f272";
-  text-align: center;
-  font-family: Ionicons;
-  display: block;
-  height: 100%;
-  line-height: 100px;
-  font-size: 5em;
-}
-.signin .inputrow {
-  position: relative;
-}
-.signin .inputrow label {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-}
-.signin .inputrow label:before {
-  color: #538a9a;
-  opacity: 0.4;
-  -webkit-transition: opacity 300ms 0 ease;
-  -moz-transition: opacity 300ms 0 ease;
-  transition: opacity 300ms 0 ease;
-}
-.signin input[type="text"],
-.signin input[type="password"] {
-  padding: 10px 12px 10px 32px;
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  border: 1px solid rgba(255,255,255,0.5);
-  background-color: #fff;
-  color: #333;
-  font-size: 1em;
-  font-weight: 300;
-  outline: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-transition: border-color 300ms 0 ease;
-  -moz-transition: border-color 300ms 0 ease;
-  transition: border-color 300ms 0 ease;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.signin input[type="text"]:focus + label:before,
-.signin input[type="password"]:focus + label:before {
-  opacity: 1;
-}
-.signin input[type="submit"] {
-  -webkit-appearance: none;
-  height: 40px;
-  padding: 10px 12px;
-  margin-bottom: 10px;
-  background-color: #538a9a;
-  text-transform: uppercase;
-  color: #fff;
-  border: 0px;
-  float: right;
-  margin: 0;
-  outline: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.signin input[type="submit"]:hover {
-  background-color: #5e98a8;
-}
-.signin input[type="submit"]:active {
-  background-color: #4a7b89;
-}
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 36px;
-  font-size: 0.6em;
-  font-weight: normal;
-  line-height: 16px;
-  opacity: 0.8;
-  text-transform: uppercase;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-input[type="checkbox"] + label:before,
-input[type="checkbox"] + label:after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 16px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-}
-input[type="checkbox"] + label:before {
-  left: 0;
-  top: -2px;
-  width: 30px;
-  background: rgba(0,0,0,0.3);
-  -webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
-  -moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
-  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
-}
-input[type="checkbox"] + label:after {
-  opacity: 0.3;
-  background: #fff;
-  top: 0px;
-  left: 2px;
-  height: 12px;
-  width: 12px;
-  -webkit-transition: all 200ms 0 ease;
-  -moz-transition: all 200ms 0 ease;
-  transition: all 200ms 0 ease;
-}
-input[type="checkbox"]:checked + label {
-  opacity: 1;
-}
-input[type="checkbox"]:checked + label:after {
-  opacity: 1;
-  left: 16px;
-}
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-.cf:after {
-  clear: both;
-}
-.cf {
-  *zoom: 1;
-}</style>
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css"/>
+  <link href="https://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css" rel="stylesheet" type="text/css"/>
+      <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <title>Nomina</title>
 </head>
