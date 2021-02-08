@@ -1,27 +1,34 @@
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="index">Nomina</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Archivo
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="nominageneral">Nómina General</a>
-            <a class="dropdown-item" href="nominaindividual">Nomina Individual</a>
-            <a class="dropdown-item" href="asistencias">Asistencias</a>
-            <a class="dropdown-item" href="empleados">Empleados</a>
-            <a class="dropdown-item" href="cargo">Cargo</a>
-            <a class="dropdown-item" href="departamento">Departamento</a>
-            <a class="dropdown-item" href="horarios">Horarios</a>
-            <a class="dropdown-item" href="pago">Pago</a>
-          </div>
-        </li>
+<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+  <div class="c-sidebar-brand d-lg-down-none">
+    <h3>Nomina</h3>
+  </div>
+  <ul class="c-sidebar-nav">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+        </svg> Inicio</a></li>
+    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-folder"></use>
+        </svg> Archivo</a>
+      <ul class="c-sidebar-nav-dropdown-items">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="empleados"><span class="c-sidebar-nav-icon"></span> Empleados</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="cargo"><span class="c-sidebar-nav-icon"></span> Cargo</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="horarios"><span class="c-sidebar-nav-icon"></span> Horarios</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="departamento"><span class="c-sidebar-nav-icon"></span> Departamento</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="pago"><span class="c-sidebar-nav-icon"></span> Pago</a></li>
       </ul>
-    </div>
-</nav>
- 
+    </li>
+    <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <svg class="c-sidebar-nav-icon">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bar-chart"></use>
+        </svg> Reportes</a>
+      <ul class="c-sidebar-nav-dropdown-items">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="nominageneral"><span class="c-sidebar-nav-icon"></span> Nomina General</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="nominaindividual"><span class="c-sidebar-nav-icon"></span> Nomina Individual</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="asistencias"><span class="c-sidebar-nav-icon"></span> Asistencias</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="extras"><span class="c-sidebar-nav-icon"></span> Extras</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="descuentos"><span class="c-sidebar-nav-icon"></span> Descuentos</a></li>
+      </ul>
+    </li>
+</div>

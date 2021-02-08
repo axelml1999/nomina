@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('content')
-<div class="container pt-5">
-  <div class="container1">
+<div class="container">
+  <div class="container1 ">
         <h1>Modulo de Asistencias de Empleados</h1>
   </div>
      

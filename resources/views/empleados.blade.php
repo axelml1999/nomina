@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-<div class="container pt-5">
+<div class="container">
   <div class="container1">
     <h1>Modulo de Empleados</h1>
     <ul class="nav nav-tabs">
@@ -49,7 +49,7 @@
         <br>
 
         <div class="row">
-          <div class="col">
+          <div class="col pb-5">
 
 
             <br>

@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-<div class="container pt-5">
+<div class="container">
   <div class="container1">
     <h1>Modulo de Pago</h1>
     <ul class="nav nav-tabs">

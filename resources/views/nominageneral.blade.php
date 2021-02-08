@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-  <div class="container pt-5">
+  <div class="container">
     <div class="container1">
           <h1>Reporte Nómina General</h1> 
     </div>

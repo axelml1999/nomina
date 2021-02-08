@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-  <div class="container pt-5">
+  <div class="container">
     <div class="">
       <div class="container1">
         <h1>Modulo Extras</h1>
