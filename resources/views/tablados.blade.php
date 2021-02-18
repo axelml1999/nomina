@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
   <div class="container1">
-    <h1>Modulo de Pago</h1>
+    <h1>Modulo de Empleados</h1>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link text-white" href="/empleados">Registro</a>

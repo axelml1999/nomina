@@ -14,9 +14,6 @@ class ArchivoController extends Controller
     public function horarios(){
         return view('horarios');
     }
-    public function cargo(){
-        return view('cargo');
-    }
     public function departamento(){
         return view('departamento');
     }
@@ -37,5 +34,20 @@ class ArchivoController extends Controller
     }
     public function nominageneral(){
         return view('nominageneral');
+    }
+
+    public function login(){
+        return view('login');
+    }
+
+    public function index(){
+        return view('index');
+    }
+    public function extras(){
+        return view('extras');
+    }
+
+    public function descuentos(){
+        return view('descuentos');
     }
 }
