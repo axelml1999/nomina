@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('content')
+
 <div class="container">
   <div class="container1">
     <h1>Modulo de Empleados</h1>
@@ -13,89 +14,70 @@
       </li>
     </ul>
   </div>
-  <div class="form__top pt-4">
+  <div>
     <h2>Ingresar Datos</h2>
   </div>
-  <form class="form__reg" action="">
-
+  <form action="/empleados" method="POST" class="form__reg">
+    @csrf
     <div class="row">
-      <div class="col">
+      <div class="col-6">
         <h4>Nombre(s)</h4>
-        <input type="text" class="form-control" placeholder="Nombre(s)">
+        <input type="text" class="form-control" placeholder="Nombre(s)" name="nombre">
         <br>
         <h4>Apellido paterno</h4>
-        <input type="text" class="form-control" placeholder="Apellido Paterno">
+        <input type="text" class="form-control" placeholder="Apellido Paterno" name="apellido_paterno">
         <br>
         <h4>Apellido Marterno</h4>
-        <input type="text" class="form-control" placeholder="Apellido Marterno">
-        <br>
-        <h4>Fecha de Nacimiento</h4>
-        <input type="text" class="form-control" placeholder="Fecha de nacimiento">
-        <br>
-        <h4>Sexo</h4>
-        <div class="form-group col-md-4">
-          <select id="inputState" class="form-control">
-            <option selected>Sexo...</option>
-            <option value="1">Hombre</option>
-            <option value="2">Mujer</option>
-          </select>
-        </div>
+        <input type="text" class="form-control" placeholder="Apellido Marterno" name="apellido_materno">
         <br>
         <h4>CURP</h4>
-        <input type="text" class="form-control" placeholder="curp">
+        <input type="text" class="form-control" placeholder="curp" name="curp">
         <br>
-        <h4>Horario</h4>
-        <input type="text" class="form-control" placeholder="Horario">
+        <h4>Dirección</h4>
+        <input type="text" class="form-control" placeholder="Dirección" name="direccion">
         <br>
-
-        <div class="row">
-          <div class="col pb-5">
-
-
-            <br>
-
-            <input class="btn btn-outline-info" type="submit" value="REGISTRAR">&nbsp;&nbsp;
-            <input class="btn btn-outline-danger" type="reset" value="LIMPIAR">
-            <button type="button" class="btn btn-danger">Eliminar</button>
-          </div>
+        <h4>Salario</h4>
+        <input type="text" class="form-control" placeholder="Salario" name="salario">
+        <br>
+      </div>
+      <div class="col-6">
+        <h4>turno</h4>
+        <input type="text" class="form-control" placeholder="turno_id" name="turno_id">
+        <br> 
+        <h4>Fecha de nacimiento</h4>
+        <input type="text" class="form-control" placeholder="fecha_nacimiento" name="fecha_nacimiento">
+        <br>
+        <h4>Cargo</h4>
+        <input type="text" class="form-control" placeholder="cargo_id" name="cargo_id">
+        <br>
+        <h4>Departamento</h4>
+        <input type="text" class="form-control" placeholder="departamento_id" name="departamento_id">
+        <br>
+        <h4>Sexo</h4>
+        <input type="text" class="form-control" placeholder="sexo_id" name="sexo_id">
+        <br>
+        <h4>Pago</h4>
+        <input type="text" class="form-control" placeholder="pago_id" name="pago_id">
+        <br>
+        
+      </div>
+      <br> 
+    </div>
+    <div class="col-12">
+      @foreach ($errors->all() as $message)
+        @if ($errors->any())
+          <p class="alert alert-danger">
+          {{$message}}
+          </p>
+        @endif
+      @endforeach
+    </div>
+    <div>
+      <br>
+      <button type="submit" class="btn btn-primary right action_submit">Crear empleado</button>
+      <input class="btn btn-outline-danger" type="reset" value="LIMPIAR"> 
+    </div>
   </form>
+  <br><br><br>
 </div>
-</div>
-
-<br><br><br>
-
-<div class="col-6">
-  <div class="container">
-    <h2></h2>
-    <form class="form__reg" action="">
-
-      <div class="row">
-        <div class="col">
-
-          <h4>Puesto</h4>
-          <input type="text" class="form-control" placeholder="Puesto">
-          <br>
-          <h4>Departamento</h4>
-          <input type="text" class="form-control" placeholder="Departamento">
-          <br>
-          <h4>Fecha de Ingreso</h4>
-          <input type="text" class="form-control" placeholder="">
-          <br>
-          <h4>Salario</h4>
-          <input type="text" class="form-control" placeholder="">
-          <br>
-          <h4>NSS</h4>
-          <input type="text" class="form-control" placeholder="Numero de Seguro Social">
-          <br>
-          <h4>RFC</h4>
-          <input type="text" class="form-control" placeholder="Registro Federal de Contribuyentes">
-          <br>
-          <div class="row">
-            <div class="col">
-    </form>
-  </div>
-</div>
-</div>
-
-
 @endsection
