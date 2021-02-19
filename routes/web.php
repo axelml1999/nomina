@@ -25,7 +25,6 @@ Route::get('descuentos', 'App\Http\Controllers\ArchivoController@descuentos');
 //     $empleados = Empleado::all(); 
 //     var_dump($empleados);
 // });
-
 Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
 Route::post('empleados', 'App\Http\Controllers\ArchivoController@creates');
 Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
@@ -35,8 +34,6 @@ Route::get('departamento', 'App\Http\Controllers\DepartamentoController@departam
 Route::get('tabla', 'App\Http\Controllers\ArchivoController@tabla');
 Route::get('tablados', 'App\Http\Controllers\ArchivoController@tablados');
 Route::get('tablados/{id}/edit', 'App\Http\Controllers\ArchivoController@edit');
-Route::put('tablados/{id}', 'App\Http\Controllers\ArchivoController@update');
-Route::delete('tablados/{id}', 'App\Http\Controllers\ArchivoController@destroy');
 Route::get('nominageneral', 'App\Http\Controllers\ArchivoController@nominageneral');
 Route::get('nominaindividual', 'App\Http\Controllers\ArchivoController@nominaindividual');
 Route::get('asistencias', 'App\Http\Controllers\ArchivoController@asistencias');
@@ -52,5 +49,9 @@ Route::post('departamento', 'App\Http\Controllers\DepartamentoController@store')
 // Rutas PUT-----------------------------------------------------------------------------------
 
 Route::put('editCargo/{cargo}', 'App\Http\Controllers\CargoController@update');
-
+Route::put('tablados/{id}', 'App\Http\Controllers\ArchivoController@update');
 //---------------------------------------------------------------------------------------------
+// Rutas Delete -------------------------------------------------------------------------------
+Route::delete('tablados/{id}', 'App\Http\Controllers\ArchivoController@destroy');
+Route::delete('cargo/{id}', 'App\Http\Controllers\CargoController@destroy');
+

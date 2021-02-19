@@ -37,7 +37,8 @@
       <tr>
         <th>Id</th>
         <th>Cargo</th>
-        <th>Acciones</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -45,9 +46,13 @@
       <tr>
         <td>{{$cargo->id}}</td>
         <td>{{$cargo->nombre_cargo}}</td>
-        <td><a href="/editCargo/{{$cargo->id}}"><button type="button" class="btn btn-dark">Editar</button></a>
-          <button type="button" class="btn btn-danger">Eliminar</button>
-        </td>
+        <td><a href="/editCargo/{{$cargo->id}}"><button type="button" class="btn btn-dark">Editar</button></a></td>
+        <form method="POST" action="{{ url('/cargo/'.$cargo->id) }}">
+          @csrf
+          {{ csrf_field() }}
+          {{ method_field('DELETE') }}
+          <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
+        </form>
       </tr>
       @endforeach
     </tbody>

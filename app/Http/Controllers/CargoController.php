@@ -31,4 +31,9 @@ class CargoController extends Controller
                 ]);
         return redirect('cargo');
     }
+
+    public function destroy($id){
+        Cargo::destroy($id);
+        return redirect('cargo');
+    }
 }
