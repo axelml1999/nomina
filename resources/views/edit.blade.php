@@ -1,5 +1,7 @@
 @extends('layout.main')
+
 @section('content')
+
 <div class="container">
     <div class="container1">
       <h1>Modificar el usuario</h1>
