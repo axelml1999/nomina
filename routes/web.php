@@ -40,11 +40,17 @@ Route::delete('tablados/{id}', 'App\Http\Controllers\ArchivoController@destroy')
 Route::get('nominageneral', 'App\Http\Controllers\ArchivoController@nominageneral');
 Route::get('nominaindividual', 'App\Http\Controllers\ArchivoController@nominaindividual');
 Route::get('asistencias', 'App\Http\Controllers\ArchivoController@asistencias');
+Route::get('editCargo/{cargo}', 'App\Http\Controllers\CargoController@edit');
 
 //---------------------------------------------------------------------------------------------
 // Rutas Post ---------------------------------------------------------------------------------
 
 Route::post('cargo', 'App\Http\Controllers\CargoController@store');
 Route::post('departamento', 'App\Http\Controllers\DepartamentoController@store');
+
+//---------------------------------------------------------------------------------------------
+// Rutas PUT-----------------------------------------------------------------------------------
+
+Route::put('editCargo/{cargo}', 'App\Http\Controllers\CargoController@update');
 
 //---------------------------------------------------------------------------------------------

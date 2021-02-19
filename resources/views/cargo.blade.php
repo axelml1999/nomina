@@ -9,6 +9,15 @@
     <h2>Cargo</h2>
   </div>
   <form class="form__reg" action="/cargo" method="POST">
+    @if($errors->isEmpty())
+
+    @else
+    <div class="alert alert-danger">
+      @foreach($errors -> all() as $messages)
+      <li>{{$messages}}</li>
+      @endforeach
+    </div>
+    @endif
     @csrf
     <div class="row">
       <div class="form-group">
@@ -33,12 +42,13 @@
     </thead>
     <tbody>
       @foreach ($cargos as $cargo)
-        <tr>
-            <td>{{$cargo->id}}</td>
-            <td>{{$cargo->nombre_cargo}}</td>
-            <td><button type="button" class="btn btn-dark">Editar</button>
-            <button type="button" class="btn btn-danger">Eliminar</button></td>
-        </tr>
+      <tr>
+        <td>{{$cargo->id}}</td>
+        <td>{{$cargo->nombre_cargo}}</td>
+        <td><a href="/editCargo/{{$cargo->id}}"><button type="button" class="btn btn-dark">Editar</button></a>
+          <button type="button" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
       @endforeach
     </tbody>
   </table>
