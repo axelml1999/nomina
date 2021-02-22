@@ -21,14 +21,15 @@ class DepartamentoController extends Controller
         return view('departamento', compact('departamentos'));
     }
 
-    public function edit(Departamento $cargo) {
+    public function edit(Departamento $departamento) {
         return view('editDepartamento', compact('departamento'));
     }
 
-    public function update(DepartamentoRequest $request, Departamento $cargo) {
-        Departamento::where('id', $cargo->id)
+    public function update(DepartamentoRequest $request, Departamento $departamento) {
+        Departamento::where('id', $departamento->id)
                 -> update([
-                    'nombre_cargo' => $request->nombre_cargo
+                    'nombre_dep' => $request->nombre_dep,
+                    'num_trab' => $request->num_trab
                 ]);
         return redirect('departamento');
     }

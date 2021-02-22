@@ -55,7 +55,7 @@
           <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
         </form>
         <td>
-          <a href="{{ url('tablados/'.$empleado->id.'/edit') }}">
+          <a href="{{ url('tablados/'.$empleado->id) }}">
             <button type="button" class="btn btn-success">Editar</button>
           </a>
         </td>

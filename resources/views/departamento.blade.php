@@ -40,7 +40,8 @@
       <tr>
         <th>Departamento</th>
         <th>Numero de empleados</th>
-        <th>Acciones</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -48,9 +49,14 @@
       <tr>
         <td>{{$dep->nombre_dep}}</td>
         <td>{{$dep->num_trab}}</td>
-        <td><button type="button" class="btn btn-dark">Editar</button>
-          <button type="button" class="btn btn-danger">Eliminar</button>
+        <td><a href="/editDepartamento/{{$dep->id}}"><button type="button" class="btn btn-dark">Editar</button></a> 
         </td>
+        <form method="POST" action="{{ url('/departamento/'.$dep->id) }}">
+          @csrf
+          {{ csrf_field() }}
+          {{ method_field('DELETE') }}
+          <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
+        </form>
       </tr>
       @endforeach
     </tbody>

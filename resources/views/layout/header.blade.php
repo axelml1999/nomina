@@ -13,7 +13,6 @@
   <!-- Main styles for this application-->
   <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript" src="{{ asset('js/table.js') }}"></script>
-  <link href="{{ asset('css/table.css') }}" rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
 
