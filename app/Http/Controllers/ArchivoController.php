@@ -25,7 +25,7 @@ class ArchivoController extends Controller
     //         "sexo_id" => $request->sexo_id,
     //         "fecha_nacimiento"  => $request->fecha_nacimiento,
     //         "pago_id"  => $request->pago_id
-    //     ]); 
+    //     ]);
     //     return redirect("tablados");
     // }
 
@@ -50,12 +50,12 @@ class ArchivoController extends Controller
         // $empleado=Empleado::findOrFail($id);
         // return view('edit',compact('empleado'));
     // }
-    
 
 
-    
-    
-   
+
+
+
+
 
     public function horarios(){
         return view('horarios');
@@ -87,11 +87,5 @@ class ArchivoController extends Controller
     public function index(){
         return view('index');
     }
-    public function extras(){
-        return view('extras');
-    }
 
-    public function descuentos(){
-        return view('descuentos');
-    }
 }
