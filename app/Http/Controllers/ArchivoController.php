@@ -54,12 +54,6 @@ class ArchivoController extends Controller
 
 
 
-
-
-
-    public function horarios(){
-        return view('horarios');
-    }
     public function departamento(){
         return view('departamento');
     }

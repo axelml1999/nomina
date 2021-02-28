@@ -26,7 +26,8 @@ Route::get('editDescuentos/{descuentos}', 'App\Http\Controllers\DescuentoControl
 Route::get('empleados', 'App\Http\Controllers\EmpleadoController@empleados');
 Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
 Route::get('tablados', 'App\Http\Controllers\EmpleadoController@tablados');
-Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
+Route::get('horarios', 'App\Http\Controllers\HorariosController@horarios');
+Route::get('editHorarios/{id}', 'App\Http\Controllers\HorariosController@editar');
 Route::get('cargo', 'App\Http\Controllers\CargoController@cargo');
 Route::get('pago', 'App\Http\Controllers\ArchivoController@pago');
 Route::get('departamento', 'App\Http\Controllers\DepartamentoController@departamento');
@@ -44,6 +45,7 @@ Route::post('departamento', 'App\Http\Controllers\DepartamentoController@store')
 Route::post('empleados', 'App\Http\Controllers\EmpleadoController@creates');
 Route::post('extras', 'App\Http\Controllers\ExtraController@registro')->name('extras');
 Route::post('descuentos', 'App\Http\Controllers\DescuentoController@registro')->name('descuentos');
+Route::post('horarios', 'App\Http\Controllers\HorariosController@crear')->name('horarios');
 
 //---------------------------------------------------------------------------------------------
 // Rutas PUT-----------------------------------------------------------------------------------
@@ -53,6 +55,7 @@ Route::put('editDepartamento/{departamento}', 'App\Http\Controllers\Departamento
 Route::put('tablados/{id}', 'App\Http\Controllers\EmpleadoController@update');
 Route::put('editExtras/{extra}', 'App\Http\Controllers\ExtraController@update');
 Route::put('editDescuentos/{descuentos}', 'App\Http\Controllers\DescuentoController@update');
+Route::put('editHorarios/{id}', 'App\Http\Controllers\HorariosController@update');
 
 //---------------------------------------------------------------------------------------------
 // Rutas Delete -------------------------------------------------------------------------------
@@ -61,3 +64,4 @@ Route::delete('departamento/{id}', 'App\Http\Controllers\DepartamentoController@
 Route::delete('tablados/{id}', 'App\Http\Controllers\EmpleadoController@destroy');
 Route::delete('extras/{id}', 'App\Http\Controllers\ExtraController@destroy');
 Route::delete('descuentos/{id}', 'App\Http\Controllers\DescuentoController@destroy');
+Route::delete('horarios/{id}', 'App\Http\Controllers\HorariosController@delete');

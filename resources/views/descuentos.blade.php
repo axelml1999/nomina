@@ -44,7 +44,8 @@
                         <tr>
                             <th>Codigo</th>
                             <th>Descripcion</th>
-                            <th>Valor Aproximado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
