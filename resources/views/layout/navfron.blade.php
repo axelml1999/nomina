@@ -17,19 +17,19 @@
     </ul>
     <ul class="c-header-nav ml-auto mr-4">
         <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
+                <div class="c-avatar"><img class="c-avatar-img" src="https://cdn.icon-icons.com/icons2/67/PNG/512/user_13230.png" alt="user@email.com"></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right pt-0">
                 <div class="dropdown-header bg-light py-2"><strong>Cuenta</strong></div><a class="dropdown-item" href="#">
-                    <svg class="c-icon mr-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                    </svg> Mi Perfil</a><a class="dropdown-item" href="#">
-                    <svg class="c-icon mr-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                    </svg> Configuracion</a><a class="dropdown-item" href="/">
-                    <svg class="c-icon mr-2">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-                    </svg> Cerrar Sesion</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <svg class="c-icon mr-2">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                        </svg> Cerrar Sesion
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
             </div>
         </li>
     </ul>
