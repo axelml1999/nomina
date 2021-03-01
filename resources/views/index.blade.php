@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('content')
   <div class="container">
-    <h1>Bienvenido Hector</h1>
+    <h1>Bienvenido {{ Auth::user()->name }}</h1>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>

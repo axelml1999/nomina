@@ -16,11 +16,6 @@ class DepartamentoController extends Controller
         return redirect('departamento');
     }
 
-    public function departamento() {
-        $departamentos = Departamento::all();
-        return view('departamento', compact('departamentos'));
-    }
-
     public function edit(Departamento $departamento) {
         return view('editDepartamento', compact('departamento'));
     }

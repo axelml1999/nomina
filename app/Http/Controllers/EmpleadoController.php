@@ -50,15 +50,6 @@ class empleadoController extends Controller {
         // return view('edit',compact('empleado'));
     }
 
-    public function tablados(){
-        $empleados = Empleado::all();
-        return view('tablados',compact("empleados"));
-    }
-
-    public function empleados(){
-        return view('empleados');
-    }
-
 
 
 }

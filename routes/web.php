@@ -17,23 +17,24 @@ use App\Models\Empleado;
 
 // Rutas hacia las vistas-------------------------------------------------------------------
 
-Route::get('/', 'App\Http\Controllers\ArchivoController@login');
-Route::get('index', 'App\Http\Controllers\ArchivoController@index');
-Route::get('extras', 'App\Http\Controllers\ArchivoController@extras');
-Route::get('descuentos', 'App\Http\Controllers\ArchivoController@descuentos');
-Route::get('empleados', 'App\Http\Controllers\EmpleadoController@empleados');
-Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
-Route::get('tablados', 'App\Http\Controllers\EmpleadoController@tablados');
-Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
-Route::get('cargo', 'App\Http\Controllers\CargoController@cargo');
-Route::get('pago', 'App\Http\Controllers\ArchivoController@pago');
-Route::get('departamento', 'App\Http\Controllers\DepartamentoController@departamento');
-Route::get('tabla', 'App\Http\Controllers\ArchivoController@tabla');
-Route::get('nominageneral', 'App\Http\Controllers\ArchivoController@nominageneral');
-Route::get('nominaindividual', 'App\Http\Controllers\ArchivoController@nominaindividual');
-Route::get('asistencias', 'App\Http\Controllers\ArchivoController@asistencias');
+//Route::get('/', 'App\Http\Controllers\ArchivoController@login');
+//Route::get('index', 'App\Http\Controllers\ArchivoController@index');
+Route::get('extras', 'App\Http\Controllers\HomeController@extras');
+Route::get('descuentos', 'App\Http\Controllers\HomeController@descuentos');
+Route::get('empleados', 'App\Http\Controllers\HomeController@empleados');
+Route::get('tablados', 'App\Http\Controllers\HomeController@tablados');
+Route::get('horarios', 'App\Http\Controllers\HomeController@horarios');
+Route::get('cargo', 'App\Http\Controllers\HomeController@cargo');
+Route::get('pago', 'App\Http\Controllers\HomeController@pago');
+Route::get('departamento', 'App\Http\Controllers\HomeController@departamento');
+Route::get('tabla', 'App\Http\Controllers\HomeController@tabla');
+Route::get('nominageneral', 'App\Http\Controllers\HomeController@nominageneral');
+Route::get('nominaindividual', 'App\Http\Controllers\HomeController@nominaindividual');
+Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
+
 Route::get('editCargo/{cargo}', 'App\Http\Controllers\CargoController@edit');
 Route::get('editDepartamento/{departamento}', 'App\Http\Controllers\DepartamentoController@edit');
+Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
 //---------------------------------------------------------------------------------------------
 // Rutas Post ---------------------------------------------------------------------------------
 
@@ -52,3 +53,8 @@ Route::put('tablados/{id}', 'App\Http\Controllers\EmpleadoController@update');
 Route::delete('cargo/{id}', 'App\Http\Controllers\CargoController@destroy');
 Route::delete('departamento/{id}', 'App\Http\Controllers\DepartamentoController@destroy');
 Route::delete('tablados/{id}', 'App\Http\Controllers\EmpleadoController@destroy');
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
