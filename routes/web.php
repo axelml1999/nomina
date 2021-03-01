@@ -17,7 +17,6 @@ use App\Models\Empleado;
 
 // Rutas hacia las vistas-------------------------------------------------------------------
 
-//Route::get('/', 'App\Http\Controllers\ArchivoController@login');
 //Route::get('index', 'App\Http\Controllers\ArchivoController@index');
 Route::get('extras', 'App\Http\Controllers\HomeController@extras');
 Route::get('descuentos', 'App\Http\Controllers\HomeController@descuentos');
@@ -32,15 +31,21 @@ Route::get('nominageneral', 'App\Http\Controllers\HomeController@nominageneral')
 Route::get('nominaindividual', 'App\Http\Controllers\HomeController@nominaindividual');
 Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
 
+Route::get('editExtras/{extra}', 'App\Http\Controllers\ExtraController@editExtras');
+Route::get('editDescuentos/{descuentos}', 'App\Http\Controllers\DescuentoController@editDescuentos');
+Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
+Route::get('editHorarios/{id}', 'App\Http\Controllers\HorariosController@editar');
 Route::get('editCargo/{cargo}', 'App\Http\Controllers\CargoController@edit');
 Route::get('editDepartamento/{departamento}', 'App\Http\Controllers\DepartamentoController@edit');
-Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
 //---------------------------------------------------------------------------------------------
 // Rutas Post ---------------------------------------------------------------------------------
 
 Route::post('cargo', 'App\Http\Controllers\CargoController@store');
 Route::post('departamento', 'App\Http\Controllers\DepartamentoController@store');
 Route::post('empleados', 'App\Http\Controllers\EmpleadoController@creates');
+Route::post('extras', 'App\Http\Controllers\ExtraController@registro')->name('extras');
+Route::post('descuentos', 'App\Http\Controllers\DescuentoController@registro')->name('descuentos');
+Route::post('horarios', 'App\Http\Controllers\HorariosController@crear')->name('horarios');
 
 //---------------------------------------------------------------------------------------------
 // Rutas PUT-----------------------------------------------------------------------------------
@@ -48,11 +53,21 @@ Route::post('empleados', 'App\Http\Controllers\EmpleadoController@creates');
 Route::put('editCargo/{cargo}', 'App\Http\Controllers\CargoController@update');
 Route::put('editDepartamento/{departamento}', 'App\Http\Controllers\DepartamentoController@update');
 Route::put('tablados/{id}', 'App\Http\Controllers\EmpleadoController@update');
+Route::put('editExtras/{extra}', 'App\Http\Controllers\ExtraController@update');
+Route::put('editDescuentos/{descuentos}', 'App\Http\Controllers\DescuentoController@update');
+Route::put('editHorarios/{id}', 'App\Http\Controllers\HorariosController@update');
+
 //---------------------------------------------------------------------------------------------
 // Rutas Delete -------------------------------------------------------------------------------
 Route::delete('cargo/{id}', 'App\Http\Controllers\CargoController@destroy');
 Route::delete('departamento/{id}', 'App\Http\Controllers\DepartamentoController@destroy');
 Route::delete('tablados/{id}', 'App\Http\Controllers\EmpleadoController@destroy');
+Route::delete('extras/{id}', 'App\Http\Controllers\ExtraController@destroy');
+Route::delete('descuentos/{id}', 'App\Http\Controllers\DescuentoController@destroy');
+Route::delete('horarios/{id}', 'App\Http\Controllers\HorariosController@delete');
+
+//----------------------------------------------------------------------------------------------
+// Rutas Auth ----------------------------------------------------------------------------------
 
 Auth::routes();
 

@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Cargo;
 use App\Models\Departamento;
+use App\Models\Descuento;
 use App\Models\Empleado;
+use App\Models\Extra;
+use App\Models\Horarios;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -30,7 +33,8 @@ class HomeController extends Controller
     }
 
     public function horarios(){
-        return view('horarios');
+        $target = Horarios :: all();
+        return view('horarios', compact ('target'));
     }
 
     public function pago(){
@@ -55,12 +59,14 @@ class HomeController extends Controller
         return view('login');
     }
 
-    public function extras(){
-        return view('extras');
+    public function extras () {
+        $extras = Extra::all();
+        return view('extras', compact('extras'));
     }
 
-    public function descuentos(){
-        return view('descuentos');
+    public function descuentos () {
+        $descuentos = Descuento::all();
+        return view('descuentos', compact('descuentos'));
     }
 
     public function cargo() {
