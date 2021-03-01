@@ -21,19 +21,22 @@
         <th>Telefono</th>
         <th>Numero de Cuentra</th>
         <th>Numero de Tarjeta</th>
+        <th>Acción</th>
       </tr>
     </thead>
     <tbody>
+      @foreach ($pagos as $pago)
       <tr>
-        <td>Yosua&nbsp;Sanchez&nbsp; Cruz</td>
-        <td>a3518110461@alumno.uttehuacan.edu.mx</td>
-        <td>2381112233</td>
-        <td>123456789123456789</td>
-        <td>987654321987654321</td>
-      </tr>
+        <td>{{ $pago->nombre_empleado }}</td>
+        <td>{{ $pago->correo }}</td>
+        <td>{{ $pago->telefono }}</td>
+        <td>{{ $pago->num_cuenta }}</td>
+        <td>{{ $pago->num_tarjeta }}</td>
+        <td><a href="/delete/{{ $pago->id }}" type="button" class="btn btn-dark">Eliminar</a></td>
+      </tr>          
+      @endforeach
     </tbody>
   </table>
-  <button type="button" class="btn btn-dark">Eliminar</button>
 </div>
 
 

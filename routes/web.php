@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Pago;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +22,16 @@ Route::get('descuentos', 'App\Http\Controllers\UsuarioController@descuentos');
 Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
 Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
 Route::get('cargo', 'App\Http\Controllers\ArchivoController@cargo');
-Route::get('pago', 'App\Http\Controllers\ArchivoController@pago');
+
+// Tabla pagos.
+Route::get('pago', 'App\Http\Controllers\PagoController@pago');
+Route::post('pago', 'App\Http\Controllers\PagoController@store');
+Route::get('tabla', 'App\Http\Controllers\PagoController@tabla');
+Route::get('/delete/{pago}','App\Http\Controllers\PagoController@delete');
+// Fin pagos
+
+
 Route::get('departamento', 'App\Http\Controllers\ArchivoController@departamento');
-Route::get('tabla', 'App\Http\Controllers\ArchivoController@tabla');
 Route::get('tablados', 'App\Http\Controllers\ArchivoController@tablados');
 
 

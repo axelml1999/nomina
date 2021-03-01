@@ -23,9 +23,9 @@ class ArchivoController extends Controller
     public function pago(){
         return view('pago');
     }
-    public function tabla(){
-        return view('tabla');
-    }
+    // public function tabla(){
+    //     return view('tabla');
+    // }
     public function tablados(){
         return view('tablados');
     }

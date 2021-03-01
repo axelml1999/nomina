@@ -23,7 +23,7 @@
     </div>
       <br><br><br>
 
-      <div class="container">
+    <div class="container">
     <h2></h2>          
     <table class="table table-bordered">
       <thead>
@@ -39,8 +39,8 @@
           <td>Yosua&nbsp;Sanchez&nbsp; Cruz</td>
       </tbody>
     </table>
+    <button type="button" class="btn btn-dark">Eliminar</button>
   </div>
 
 
-  <button type="button" class="btn btn-dark">Eliminar</button>
 @endsection

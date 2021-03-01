@@ -13,46 +13,42 @@
     </ul>
   </div>
   <h2 class="pt-4">Empleados</h2>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Correo Electronico</th>
-        <th>Fecha de Nacimiento</th>
-        <th>Sexo</th>
-        <th>CURP</th>
-        <th>Horario</th>
-        <th>Puesto</th>
-        <th>Departamento</th>
-        <th>Fecha de Ingreso</th>
-        <th>Salario</th>
-        <th>NSS</th>
-        <th>RFC</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Correo Electronico</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Sexo</th>
+          <th>CURP</th>
+          <th>Horario</th>
+          <th>Puesto</th>
+          <th>Departamento</th>
+          <th>Fecha de Ingreso</th>
+          <th>Salario</th>
+          <th>NSS</th>
+          <th>RFC</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   <button type="button" class="btn btn-dark">Eliminar</button>
 </div>
-
-
-
 @endsection

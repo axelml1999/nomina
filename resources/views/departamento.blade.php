@@ -40,10 +40,10 @@
           <td>4</td>
       </tbody>
     </table>
+    <button type="button" class="btn btn-dark">Eliminar</button>
   </div>
 
 
-  <button type="button" class="btn btn-dark">Eliminar</button>
 
 
 @endsection

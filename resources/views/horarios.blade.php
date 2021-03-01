@@ -45,8 +45,8 @@
         <td>Matutino</td>
       </tbody>
     </table>
+    <button type="button" class="btn btn-danger">Eliminar</button>
   </div>
 
 
-  <button type="button" class="btn btn-danger">Eliminar</button>
 @endsection
