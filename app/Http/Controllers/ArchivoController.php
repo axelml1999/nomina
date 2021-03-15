@@ -10,7 +10,6 @@ class ArchivoController extends Controller
 {
     //
 
-<<<<<<< HEAD
     public function empleados(){
         return view('empleados');
     }
@@ -41,7 +40,7 @@ class ArchivoController extends Controller
     public function nominageneral(){
         return view('nominageneral');
     }
-=======
+    
     // public function creates(EmpleadoRequest $request){
 
     //     Empleado::create([
@@ -83,7 +82,4 @@ class ArchivoController extends Controller
         // return view('edit',compact('empleado'));
     // }
 
-
-
->>>>>>> 73b8da77334d3006f770ed3435ebfe064247c2d2
 }

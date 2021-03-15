@@ -24,7 +24,7 @@ Route::get('extras', 'App\Http\Controllers\HomeController@extras');
 Route::get('descuentos', 'App\Http\Controllers\HomeController@descuentos');
 Route::get('empleados', 'App\Http\Controllers\HomeController@empleados');
 Route::get('tablados', 'App\Http\Controllers\HomeController@tablados');
-Route::get('horarios', 'App\Http\Controllers\HomeController@horarios');
+Route::get('horarios', 'App\Http\Controllers\HorariosController@horarios');
 Route::get('cargo', 'App\Http\Controllers\HomeController@cargo');
 Route::get('pago', 'App\Http\Controllers\HomeController@pago');
 Route::get('departamento', 'App\Http\Controllers\HomeController@departamento');
@@ -33,9 +33,9 @@ Route::get('nominageneral', 'App\Http\Controllers\HomeController@nominageneral')
 Route::get('nominaindividual', 'App\Http\Controllers\HomeController@nominaindividual');
 Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
 
-Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
-Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
-Route::get('cargo', 'App\Http\Controllers\ArchivoController@cargo');
+//Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
+//Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
+//Route::get('cargo', 'App\Http\Controllers\ArchivoController@cargo');
 
 // Tabla pagos.
 Route::get('pago', 'App\Http\Controllers\PagoController@pago');

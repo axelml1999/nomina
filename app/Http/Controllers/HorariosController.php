@@ -29,14 +29,22 @@ class HorariosController extends Controller
             
             return view('editHorarios', compact ('id'));
         }
-
+        
         public function update(HorariosRequest $request, Horarios $id){
             Horarios :: where ('id', $id->id)->update([
                 'entrada' => $request -> entrada,
                 'salida' => $request -> salida,
                 'turno' => $request -> turno
-            ]);
-            return redirect('horarios');
+                ]);
+                return redirect('horarios');
+            }
+
+
+            public function horarios(){
+                $target = Horarios::all();
+                return view('horarios', compact ('target'));
+            }
+        
+        
         }
-    }
-    
+        

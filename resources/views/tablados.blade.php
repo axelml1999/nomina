@@ -13,7 +13,7 @@
     </ul>
   </div>
   <h2 class="pt-4">Empleados</h2>
-<<<<<<< HEAD
+ 
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -51,7 +51,7 @@
       </tbody>
     </table>
   <button type="button" class="btn btn-dark">Eliminar</button>
-=======
+
   <div style="overflow-x:auto">
    <table class="table table-bordered">
     <thead>
@@ -104,6 +104,6 @@
     </tbody>
   </table>
 </div>
->>>>>>> 73b8da77334d3006f770ed3435ebfe064247c2d2
+
 </div>
 @endsection
