@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class NominasIndividuale extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'empleado_id',
+        'nominagen_id',
+        'total_nom'
+    ];
 }

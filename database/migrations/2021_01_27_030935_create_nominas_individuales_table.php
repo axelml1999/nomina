@@ -15,8 +15,8 @@ class CreateNominasIndividualesTable extends Migration
     {
         Schema::create('nominas_individuales', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('empleado_id');
-            $table->unsignedBigInteger('nominagen_id');
+            $table->string('empleado_id');
+            $table->decimal('nominagen_id');
             $table->decimal('total_nom');
             $table->timestamps();
             $table->foreign('empleado_id')->references('id')->on('empleados');

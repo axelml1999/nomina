@@ -30,9 +30,10 @@ Route::get('pago', 'App\Http\Controllers\HomeController@pago');
 Route::get('departamento', 'App\Http\Controllers\HomeController@departamento');
 Route::get('tabla', 'App\Http\Controllers\HomeController@tabla');
 Route::get('nominageneral', 'App\Http\Controllers\NominasGeneraleController@nominaGeneral');
-Route::get('nominaindividual', 'App\Http\Controllers\HomeController@nominaindividual');
+Route::get('nominaindividual', 'App\Http\Controllers\NominasIndividualeController@nominaIndividual');
 Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
 Route::get('general', 'App\Http\Controllers\NominasGeneraleController@general');
+Route::get('individual', 'App\Http\Controllers\NominasIndividualeController@individual');
 
 //Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
 //Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
@@ -66,6 +67,7 @@ Route::post('extras', 'App\Http\Controllers\ExtraController@registro')->name('ex
 Route::post('descuentos', 'App\Http\Controllers\DescuentoController@registro')->name('descuentos');
 Route::post('horarios', 'App\Http\Controllers\HorariosController@crear')->name('horarios');
 Route::post('general', 'App\Http\Controllers\NominasGeneraleController@registroGeneral')->name('nominaGeneral');
+Route::post('individual', 'App\Http\Controllers\NominasIndividualeController@registroIndividual')->name('nominaIndividual');
 
 //---------------------------------------------------------------------------------------------
 // Rutas PUT-----------------------------------------------------------------------------------
@@ -86,6 +88,7 @@ Route::delete('extras/{id}', 'App\Http\Controllers\ExtraController@destroy');
 Route::delete('descuentos/{id}', 'App\Http\Controllers\DescuentoController@destroy');
 Route::delete('horarios/{id}', 'App\Http\Controllers\HorariosController@delete');
 Route::delete('nominageneral/{id}', 'App\Http\Controllers\NominasGeneraleController@delete');
+Route::delete('nominaIndividual/{id}', 'App\Http\Controllers\NominasIndividualeController@delete');
 
 //----------------------------------------------------------------------------------------------
 // Rutas Auth ----------------------------------------------------------------------------------
