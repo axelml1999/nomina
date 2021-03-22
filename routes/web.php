@@ -29,9 +29,10 @@ Route::get('cargo', 'App\Http\Controllers\HomeController@cargo');
 Route::get('pago', 'App\Http\Controllers\HomeController@pago');
 Route::get('departamento', 'App\Http\Controllers\HomeController@departamento');
 Route::get('tabla', 'App\Http\Controllers\HomeController@tabla');
-Route::get('nominageneral', 'App\Http\Controllers\HomeController@nominageneral');
+Route::get('nominageneral', 'App\Http\Controllers\NominasGeneraleController@nominaGeneral');
 Route::get('nominaindividual', 'App\Http\Controllers\HomeController@nominaindividual');
 Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
+Route::get('general', 'App\Http\Controllers\NominasGeneraleController@general');
 
 //Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
 //Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
@@ -64,6 +65,7 @@ Route::post('empleados', 'App\Http\Controllers\EmpleadoController@creates');
 Route::post('extras', 'App\Http\Controllers\ExtraController@registro')->name('extras');
 Route::post('descuentos', 'App\Http\Controllers\DescuentoController@registro')->name('descuentos');
 Route::post('horarios', 'App\Http\Controllers\HorariosController@crear')->name('horarios');
+Route::post('general', 'App\Http\Controllers\NominasGeneraleController@registroGeneral')->name('nominaGeneral');
 
 //---------------------------------------------------------------------------------------------
 // Rutas PUT-----------------------------------------------------------------------------------
@@ -83,6 +85,7 @@ Route::delete('tablados/{id}', 'App\Http\Controllers\EmpleadoController@destroy'
 Route::delete('extras/{id}', 'App\Http\Controllers\ExtraController@destroy');
 Route::delete('descuentos/{id}', 'App\Http\Controllers\DescuentoController@destroy');
 Route::delete('horarios/{id}', 'App\Http\Controllers\HorariosController@delete');
+Route::delete('nominageneral/{id}', 'App\Http\Controllers\NominasGeneraleController@delete');
 
 //----------------------------------------------------------------------------------------------
 // Rutas Auth ----------------------------------------------------------------------------------
