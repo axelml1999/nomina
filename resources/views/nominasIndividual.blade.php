@@ -15,10 +15,10 @@
             <input type="text" class="form-control" placeholder="Empleado" name="empleado">
             <br>
             <h4>Nomina General</h4>
-            <input type="text" class="form-control" placeholder="Nomina General" name="nominaGeneral">
+            <input type="text" class="form-control" placeholder="Nomina General" name="nominagen">
             <br>
             <h4>Total Nomina</h4>
-            <input type="text" class="form-control" placeholder="Total Nomina" name="totalNomina">
+            <input type="text" class="form-control" placeholder="Total Nomina" name="total_nom">
             <br>
           </div>
         </div>

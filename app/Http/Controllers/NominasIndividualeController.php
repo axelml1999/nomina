@@ -22,10 +22,10 @@ class NominasIndividualeController extends Controller
     public function registroIndividual(NominaIndividualRequest $request)
     {
         NominasIndividuale::create(
-            $request->only('empleado', 'nominaGeneral', 'totalNomina')
+            $request->only('empleado', 'nominagen', 'total_nom')
         );
 
-        return redirect('nominasindividual');
+        return redirect('nominaindividual');
     }
 
     public function delete($id)

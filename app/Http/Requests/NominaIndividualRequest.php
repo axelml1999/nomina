@@ -25,8 +25,8 @@ class NominaIndividualRequest extends FormRequest
     {
         return [
             'empleado' => 'required',
-            'nominaGeneral' => 'required',
-            'totalNomina' => 'required'
+            'nominagen' => 'required',
+            'total_nom' => 'required'
         ];
     }
 
@@ -34,8 +34,8 @@ class NominaIndividualRequest extends FormRequest
     {
         return [
             'empleado.required' => 'Este campo es requerido',
-            'nominaGeneral.required' => 'Este campo es requerido',
-            'totalNomina.required' => 'Este campo es requerido'
+            'nominagen.required' => 'Este campo es requerido',
+            'total_nom.required' => 'Este campo es requerido'
         ];
     }
 }

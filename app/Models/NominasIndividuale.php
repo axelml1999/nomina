@@ -9,8 +9,8 @@ class NominasIndividuale extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'empleado_id',
-        'nominagen_id',
+        'empleado',
+        'nominagen',
         'total_nom'
     ];
 }

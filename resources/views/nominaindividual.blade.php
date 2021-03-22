@@ -7,11 +7,11 @@
     </div>
 
 
-      <form action="" class="form-inline pt-4">
+      <form class="form-inline pt-4">
 
     <div class="form-group d-flex">
 
-      <input type="number" class="form-control" placeholder="Ingrese número de empleado" >
+      <input type="number" class="form-control" placeholder="Ingrese número de empleado" type="search" name="Search">
       <button type="submit" class="btn btn-dark ml-auto">Buscar</button>
       </div>
 
@@ -39,15 +39,14 @@
         <th>Empleado</th>
         <th>Nomina General</th>
         <th>Total Nomina</th>
-        <th>Title 4</th>
       </tr>
     </thead>
     <tbody>
       @foreach ($individual as $item)
       <tr>
         <td>{{$item->id}}</td>
-        <td>{{$item->empleado_id}}</td>
-        <td>{{$item->nominagen_id}}</td>
+        <td>{{$item->empleado}}</td>
+        <td>{{$item->nominagen}}</td>
         <td>{{$item->total_nom}}</td>
         <form method="POST" action="{{ url('/nominaIndividual/' . $item->id) }}">
             @csrf
