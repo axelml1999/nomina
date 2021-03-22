@@ -46,32 +46,69 @@
         </div>
         <div class="col-6">
           <h4>turno</h4>
-          <input type="text" class="form-control" value="{{ $empleado->turno_id }}" name="turno_id">
+          <select  name="turno_id" class="form-control"  >
+            @foreach ($turnos as $turno)
+              <option value="{{ $turno->id }}"  
+                @if( $empleado->turno_id === $turno->id ) 
+                 selected
+                @endif >
+                {{ $turno['nombre_turno'] }}
+              </option>
+            @endforeach
+          </select> 
+
+          {{-- <input type="text" class="form-control" value="{{ $empleado->turno_id }}" name="turno_id"> --}}
           <br> 
           <h4>Fecha de nacimiento</h4>
           <input type="text" class="form-control" value="{{ $empleado->fecha_nacimiento }}" name="fecha_nacimiento">
           <br>
+
           <h4>Cargo</h4>
-          <input type="text" class="form-control" value="{{ $empleado->cargo_id }}" name="cargo_id">
+          <select name="cargo_id" class="form-control"  >
+            @foreach ($cargos as $cargo)
+              <option value="{{ $cargo->id }}" @if( $empleado->cargo_id === $cargo->id ) selected @endif >
+                {{ $cargo['nombre_cargo'] }}
+              </option>
+            @endforeach
+          </select>   
+
           <br>
           <h4>Departamento</h4>
-          <input type="text" class="form-control" value="{{ $empleado->departamento_id }}" name="departamento_id">
-          <br>
-          <h4>Sexo</h4>
-          <input type="text" class="form-control" value="{{ $empleado->sexo_id }}" name="sexo_id">
-          <br>
-          <h4>Pago</h4>
-          <input type="text" class="form-control" value="{{ $empleado->pago_id }}" name="pago_id">
-          <br>
+          <select name="departamento_id"  class="form-control"  >
+            @foreach ($departamentos as $departamento)
+              <option  @if( $empleado->departamento_id === $departamento->id ) selected @endif value="{{ $departamento->id }}"  >
+                {{ $departamento['nombre_dep'] }}
+              </option>
+            @endforeach
+          </select>      
           
+          <br>
+          <h4>Sexo</h4>           
+          <select name="sexo_id" class="form-control"  >
+            @foreach ($sexos as $sexo)
+                <option @if( $empleado->sexo_id === $sexo->id ) selected @endif value="{{ $sexo['id'] }}">
+                  {{ $sexo['tipo_sexo'] }}
+                </option>
+            @endforeach
+          </select>
+          <br>
+
+          <h4>Pago</h4>
+          <select name="pago_id"  class="form-control"  >
+            @foreach ($pagos as $pago)
+              <option value="{{ $pago->id }}"  @if( $empleado->pago_id === $pago->id ) selected @endif >
+                {{ $pago['descripcion_pago'] }}
+              </option>
+            @endforeach
+          </select>
+          <br>     
+
         </div>
         <br> 
       </div>
       <div>
         <br>
-        {{-- <input type="submit" value="Editar"> --}}
-
-        <button type="submit" value="editar" class="btn btn-primary right action_submit">Modificar empleado</button>
+        <button type="submit" value="editar" class="btn btn-primary right action_submit" >Modificar empleado</button>
       </div>
     </form>
 

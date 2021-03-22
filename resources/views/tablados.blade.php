@@ -17,7 +17,7 @@
    <table class="table table-bordered">
     <thead>
       <tr>
-        <th>ID empleado</th>
+        {{-- <th>ID empleado</th> --}}
         <th>Nombre</th>
         <th>Apellido paterno</th>
         <th>Apellido materno</th>
@@ -36,17 +36,37 @@
     <tbody>
       @foreach ($empleados as $empleado)
       <tr>
-        <td>{{$empleado->id}}</td>
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->apellido_paterno}}</td>
         <td>{{$empleado->apellido_materno}}</td>
         <td>{{$empleado->curp}}</td>
         <td>{{$empleado->direccion}}</td>
         <td>{{$empleado->salario}}</td>
-        <td>{{$empleado->turno_id}}</td>
-        <td>{{$empleado->cargo_id}}</td>
-        <td>{{$empleado->departamento_id}}</td>
-        <td>{{$empleado->sexo_id}}</td>
+        @if ($empleado->turno_id===1)
+          <td>Completo</td>
+        @endif
+        @if ($empleado->cargo_id===1)
+          <td>Gerente</td>
+        @elseif ($empleado->cargo_id===2)
+          <td>Empleado</td>
+          @elseif ($empleado->cargo_id===3)
+          <td>Cocinero</td>
+        @endif
+
+        @if ($empleado->departamento_id===1)
+          <td>Gerencia</td>
+        @elseif ($empleado->departamento_id===2)
+          <td>Cocina</td>
+        @else
+          <td>Recepción</td>
+        @endif
+        
+        @if ($empleado->sexo_id===1)
+          <td>femenino</td>
+        @else
+          <td>Masculino</td>
+        @endif
+
         <td>{{$empleado->fecha_nacimiento}}</td>
         <form method="POST" action="{{ url('/tablados/'.$empleado->id) }}">
           @csrf

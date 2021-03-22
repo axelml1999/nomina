@@ -22,6 +22,9 @@ Route::get('index', 'App\Http\Controllers\ArchivoController@index');
 Route::get('extras', 'App\Http\Controllers\ArchivoController@extras');
 Route::get('descuentos', 'App\Http\Controllers\ArchivoController@descuentos');
 Route::get('empleados', 'App\Http\Controllers\EmpleadoController@empleados');
+
+// Route::get('selectSex', 'App\Http\Controllers\EmpleadoController@selectSex');
+
 Route::get('tablados/{id}', 'App\Http\Controllers\EmpleadoController@edit');
 Route::get('tablados', 'App\Http\Controllers\EmpleadoController@tablados');
 Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
@@ -52,3 +55,4 @@ Route::put('tablados/{id}', 'App\Http\Controllers\EmpleadoController@update');
 Route::delete('cargo/{id}', 'App\Http\Controllers\CargoController@destroy');
 Route::delete('departamento/{id}', 'App\Http\Controllers\DepartamentoController@destroy');
 Route::delete('tablados/{id}', 'App\Http\Controllers\EmpleadoController@destroy');
+
