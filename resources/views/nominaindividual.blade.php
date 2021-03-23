@@ -5,18 +5,18 @@
     <div class="container1">
           <h1>Reporte Nómina Individual</h1>
     </div>
-       
-      
-      <form action="" class="form-inline pt-4">
+
+
+      <form class="form-inline pt-4">
 
     <div class="form-group d-flex">
-    
-      <input type="number" class="form-control" placeholder="Ingrese número de empleado" >
+
+      <input type="number" class="form-control" placeholder="Ingrese número de empleado" type="search" name="Search">
       <button type="submit" class="btn btn-dark ml-auto">Buscar</button>
       </div>
-    
+
     </div>
-    
+
     </form>
     <br>
 
@@ -36,76 +36,32 @@
     <thead>
       <tr>
         <th></th>
-        <th>Title 1</th>
-        <th>Title 2</th>
-        <th>Title 3</th>
-        <th>Title 4</th>
+        <th>Empleado</th>
+        <th>Nomina General</th>
+        <th>Total Nomina</th>
       </tr>
     </thead>
     <tbody>
+      @foreach ($individual as $item)
       <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{$item->id}}</td>
+        <td>{{$item->empleado}}</td>
+        <td>{{$item->nominagen}}</td>
+        <td>{{$item->total_nom}}</td>
+        <form method="POST" action="{{ url('/nominaIndividual/' . $item->id) }}">
+            @csrf
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <td><button type="submit" onclick="return confirm ('¿Eliminar?')"
+                    class="btn btn-danger">Eliminar</button></td>
+        </form>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>4</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>5</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>6</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>7</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>8</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      
-
+      @endforeach
     </tbody>
   </table>
 
 
-  <button type="submit" class="btn btn-primary">GENERAR +</button>
+  <a type="submit" class="btn btn-primary" href="individual">GENERAR +</a>
   </div>
 
 @endsection
-  

@@ -35,74 +35,41 @@
       <table class="table table-dark table-striped">
     <thead>
       <tr>
-        <th></th>
-        <th>Title 1</th>
-        <th>Title 2</th>
-        <th>Title 3</th>
-        <th>Title 4</th>
+        <th>id</th>
+        <th>Semana</th>
+        <th>Fecha inicio</th>
+        <th>Fecha fin</th>
+        <th>Total descuentos</th>
+        <th>Total extras</th>
+        <th>Total nomina</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2"></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>4</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>5</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>6</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>7</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>8</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      
+    
+    @foreach ($general as $item)
+    <tr>
+        <td>{{$item->id}}</td>
+        <td>{{$item->semana}}</td>
+        <td>{{$item->fecha_inicio}}</td>
+        <td>{{$item->fecha_fin}}</td>
+        <td>{{$item->total_descuentos}}</td>
+        <td>{{$item->total_extras}}</td>
+        <td>{{$item->total_nomina}}</td>
 
+        <form method="POST" action="{{ url('/nominageneral/' . $item->id) }}">
+                                    @csrf
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <td><button type="submit" onclick="return confirm ('¿Eliminar?')"
+                                            class="btn btn-danger">Eliminar</button></td>
+                                </form>
+
+      </tr>
+      @endforeach
+    
     </tbody>
   </table>
-  <button type="submit" class="btn btn-primary">GENERAR +</button>
+  <a type="submit" class="btn btn-primary" href="general">GENERAR +</a>
   </div>
 @endsection
   

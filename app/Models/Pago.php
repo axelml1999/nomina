@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pago extends Model
 {
     use HasFactory;
+    protected $fillable=[
+        'nombre_empleado',
+            'correo',
+            'telefono',
+            'num_cuenta' ,
+            'num_tarjeta'
+    ];
 }

@@ -15,11 +15,6 @@ class CargoController extends Controller
         return redirect('cargo');
     }
 
-    public function cargo() {
-        $cargos = Cargo::all();
-        return view('cargo', compact('cargos'));
-    }
-
     public function edit(Cargo $cargo) {
         return view('editCargo', compact('cargo'));
     }
