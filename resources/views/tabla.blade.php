@@ -13,7 +13,7 @@
     </ul>
   </div>
   <h2 class="pt-4">Empleados</h2>
-  <table class="table table-bordered">
+  <table id="pagos" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
         <th>Firstname</th>
@@ -33,7 +33,7 @@
         <td>{{ $pago->num_cuenta }}</td>
         <td>{{ $pago->num_tarjeta }}</td>
         <td><a href="/delete/{{ $pago->id }}" type="button" class="btn btn-dark">Eliminar</a></td>
-      </tr>          
+      </tr>
       @endforeach
     </tbody>
   </table>

@@ -24,6 +24,48 @@
     <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
     <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#empleados').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#cargos').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#horarios').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#departamentos').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#pagos').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#nomina-individual').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#nomina-general').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#asistencias').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#extras').DataTable();
+        });
+
+        $(document).ready(function() {
+            $('#descuentos').DataTable();
+        });
+    </script>
 </body>
 
 </html>

@@ -15,6 +15,9 @@
   <script type="text/javascript" src="{{ asset('js/table.js') }}"></script>
   <!-- Global site tag (gtag.js) - Google Analytics-->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+
 
   <script>
     window.dataLayer = window.dataLayer || [];

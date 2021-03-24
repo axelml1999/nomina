@@ -16,7 +16,7 @@
 
 
   <div style="overflow-x:auto">
-    <table class="table table-bordered">
+    <table id="empleados" class="table table-bordered" style="width:100%">
       <thead>
         <tr>
           {{-- <th>ID empleado</th> --}}

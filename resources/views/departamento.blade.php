@@ -35,7 +35,7 @@
 
 <div class="container">
   <h2></h2>
-  <table class="table table-bordered">
+  <table id="departamentos" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
         <th>Departamento</th>
