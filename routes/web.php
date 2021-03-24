@@ -35,7 +35,7 @@ Route::get('asistencias', 'App\Http\Controllers\HomeController@asistencias');
 Route::get('general', 'App\Http\Controllers\NominasGeneraleController@general');
 Route::get('individual', 'App\Http\Controllers\NominasIndividualeController@individual');
 
-//Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
+Route::get('empleados', 'App\Http\Controllers\ArchivoController@empleados');
 //Route::get('horarios', 'App\Http\Controllers\ArchivoController@horarios');
 //Route::get('cargo', 'App\Http\Controllers\ArchivoController@cargo');
 
