@@ -24,7 +24,7 @@ Route::get('extras', 'App\Http\Controllers\HomeController@extras');
 Route::get('descuentos', 'App\Http\Controllers\HomeController@descuentos');
 Route::get('empleados', 'App\Http\Controllers\HomeController@empleados');
 Route::get('tablados', 'App\Http\Controllers\HomeController@tablados');
-Route::get('horarios', 'App\Http\Controllers\HorariosController@horarios');
+Route::get('horarios', 'App\Http\Controllers\HomeController@horarios');
 Route::get('cargo', 'App\Http\Controllers\HomeController@cargo');
 Route::get('pago', 'App\Http\Controllers\HomeController@pago');
 Route::get('departamento', 'App\Http\Controllers\HomeController@departamento');
@@ -43,12 +43,8 @@ Route::get('individual', 'App\Http\Controllers\NominasIndividualeController@indi
 Route::get('pago', 'App\Http\Controllers\PagoController@pago');
 Route::post('pago', 'App\Http\Controllers\PagoController@store');
 Route::get('tabla', 'App\Http\Controllers\PagoController@tabla');
-Route::get('/delete/{pago}','App\Http\Controllers\PagoController@delete');
+Route::get('/delete/{pago}', 'App\Http\Controllers\PagoController@delete');
 // Fin pagos
-
-
-Route::get('departamento', 'App\Http\Controllers\ArchivoController@departamento');
-Route::get('tablados', 'App\Http\Controllers\ArchivoController@tablados');
 
 Route::get('editExtras/{extra}', 'App\Http\Controllers\ExtraController@editExtras');
 Route::get('editDescuentos/{descuentos}', 'App\Http\Controllers\DescuentoController@editDescuentos');

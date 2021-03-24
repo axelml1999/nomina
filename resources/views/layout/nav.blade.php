@@ -3,7 +3,7 @@
     <h3>Nomina</h3>
   </div>
   <ul class="c-sidebar-nav">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
         </svg> Inicio</a></li>
@@ -12,7 +12,7 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-folder"></use>
         </svg> Archivo</a>
       <ul class="c-sidebar-nav-dropdown-items">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="tablados"><span class="c-sidebar-nav-icon"></span> Empleados</a></li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="empleados"><span class="c-sidebar-nav-icon"></span> Empleados</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="cargo"><span class="c-sidebar-nav-icon"></span> Cargo</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="horarios"><span class="c-sidebar-nav-icon"></span> Horarios</a></li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="departamento"><span class="c-sidebar-nav-icon"></span> Departamento</a></li>

@@ -12,8 +12,9 @@ use App\Models\Sexo;
 use App\Models\Turno;
 use Illuminate\Support\Facades\DB;
 
-class empleadoController extends Controller {
-    
+class empleadoController extends Controller
+{
+
 
     // public function selectSex(){
     //     // $sexos=DB::table('sexos');
@@ -25,7 +26,8 @@ class empleadoController extends Controller {
     // }
 
 
-    public function creates(EmpleadoRequest $request){
+    public function creates(EmpleadoRequest $request)
+    {
 
         Empleado::create([
             "nombre" => $request->nombre,
@@ -40,37 +42,40 @@ class empleadoController extends Controller {
             "sexo_id" => $request->sexo_id,
             "fecha_nacimiento"  => $request->fecha_nacimiento,
             "pago_id"  => $request->pago_id
-        ]); 
-        
+        ]);
+
 
         return redirect("tablados");
     }
 
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         Empleado::destroy($id);
         return redirect('tablados');
         // return redirect()->route('tablados');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $turnos = Turno::all();
         $cargos = Cargo::all();
         $departamentos = Departamento::all();
         $sexos = Sexo::all();
         $pagos = Pago::all();
-        $empleado=Empleado::findOrFail($id);
+        $empleado = Empleado::findOrFail($id);
         // $selects = DB::table('empleados')
         // ->join('empleados', 'empleados.sexo_id', '=', 'sexos.id')
         // ->select('sexos.id')
         // ->get();
 
-        return view('edit',compact('empleado','sexos','cargos','turnos','departamentos','pagos'));
- 
+        return view('edit', compact('empleado', 'sexos', 'cargos', 'turnos', 'departamentos', 'pagos'));
+
         // return view('edit',compact('empleado'));
     }
 
-    public function update(EmpleadoRequest $request, $id){
+    public function update(EmpleadoRequest $request, $id)
+    {
         $empleado = Empleado::findOrFail($id);
         $empleado->update($request->all());
         return redirect('tablados');
@@ -79,26 +84,4 @@ class empleadoController extends Controller {
         // $empleado=Empleado::findOrFail($id);
         // return view('edit',compact('empleado'));
     }
-
-    public function tablados(){
-        $turnos = Turno::all();
-        $cargos = Cargo::all();
-        $departamentos = Departamento::all();
-        $sexos = Sexo::all();
-        $pagos = Pago::all();
-        $empleados = Empleado::all();
-        return view('tablados',compact('empleados','sexos','cargos','turnos','departamentos','pagos'));
-    }
-
-    public function empleados(){
-        $turnos = Turno::all();
-        $cargos = Cargo::all();
-        $departamentos = Departamento::all();
-        $sexos = Sexo::all();
-        $pagos = Pago::all();
-        return view('empleados',compact('sexos','cargos','turnos','departamentos','pagos'));
-    }
-
-
-
 }
