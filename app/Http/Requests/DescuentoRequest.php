@@ -24,13 +24,16 @@ class DescuentoRequest extends FormRequest
     public function rules()
     {
         return [
-            'descuento' => 'required'
+            'descuento' => 'required',
+            'valor' => 'required'
         ];
     }
 
-    public function messages () {
+    public function messages()
+    {
         return [
-            'descuento.required' => 'Este campo es requerido'
+            'descuento.required' => 'Este campo es requerido',
+            'valor.required' => 'El campo es requerido'
         ];
     }
 }

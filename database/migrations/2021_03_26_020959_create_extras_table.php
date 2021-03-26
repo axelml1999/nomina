@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDescuentosTable extends Migration
+class CreateExtrasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateDescuentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('descuentos', function (Blueprint $table) {
+        Schema::create('extras', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion', 200);
+            $table->string('descripcion_extra', 200);
+            $table->decimal('valor');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateDescuentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('descuentos');
+        Schema::dropIfExists('extras');
     }
 }

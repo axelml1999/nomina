@@ -9,6 +9,7 @@ class Extra extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'descripcion_extra'
+        'descripcion_extra',
+        'valor'
     ];
 }

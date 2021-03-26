@@ -24,13 +24,16 @@ class ExtrasRequest extends FormRequest
     public function rules()
     {
         return [
-            'extras' => 'required'
+            'extras' => 'required',
+            'valor' => 'required'
         ];
     }
 
-    public function messages () {
+    public function messages()
+    {
         return [
-            'extras.required' => 'El campo es requerido'
+            'extras.required' => 'El campo es requerido',
+            'valor.required' => 'El campo es requerido'
         ];
     }
 }

@@ -9,6 +9,7 @@ class Descuento extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'descripcion'
+        'descripcion',
+        'valor'
     ];
 }

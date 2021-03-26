@@ -9,25 +9,31 @@ use Illuminate\Http\Request;
 class DescuentoController extends Controller
 {
 
-    public function editDescuentos (Descuento $descuentos) {
+    public function editDescuentos(Descuento $descuentos)
+    {
         return view('descuentosEdit', compact('descuentos'));
     }
 
-    public function registro (DescuentoRequest $request) {
+    public function registro(DescuentoRequest $request)
+    {
         Descuento::create([
-            'descripcion' => $request->descuento
+            'descripcion' => $request->descuento,
+            'valor' => $request->valor
         ]);
         return back();
     }
 
-    public function update (DescuentoRequest $request, Descuento $descuentos) {
+    public function update(DescuentoRequest $request, Descuento $descuentos)
+    {
         Descuento::where('id', $descuentos->id)->update([
-            'descripcion' => $request->descuento
+            'descripcion' => $request->descuento,
+            'valor' => $request->valor
         ]);
         return redirect('descuentos');
     }
 
-    public function destroy ($id) {
+    public function destroy($id)
+    {
         Descuento::destroy($id);
         return back();
     }

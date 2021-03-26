@@ -9,25 +9,31 @@ use Illuminate\Http\Request;
 class ExtraController extends Controller
 {
 
-    public function editExtras (Extra $extra) {
+    public function editExtras(Extra $extra)
+    {
         return view('extrasEdit', compact('extra'));
     }
 
-    public function registro (ExtrasRequest $request) {
+    public function registro(ExtrasRequest $request)
+    {
         Extra::create([
-            'descripcion_extra' => $request->extras
+            'descripcion_extra' => $request->extras,
+            'valor' => $request->valor
         ]);
         return back();
     }
 
-    public function update (ExtrasRequest $request, Extra $extra) {
+    public function update(ExtrasRequest $request, Extra $extra)
+    {
         Extra::where('id', $extra->id)->update([
-            'descripcion_extra' => $request->extras
+            'descripcion_extra' => $request->extras,
+            'valor' => $request->valor
         ]);
         return redirect('extras');
     }
 
-    public function destroy ($id) {
+    public function destroy($id)
+    {
         Extra::destroy($id);
         return back();
     }
