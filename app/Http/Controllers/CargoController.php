@@ -8,26 +8,30 @@ use App\Models\Cargo;
 
 class CargoController extends Controller
 {
-    public function store(CargoRequest $request) {
+    public function store(CargoRequest $request)
+    {
         Cargo::create([
-            'nombre_cargo' => $request -> nombre_cargo
+            'nombre_cargo' => $request->nombre_cargo
         ]);
         return redirect('cargo');
     }
 
-    public function edit(Cargo $cargo) {
+    public function edit(Cargo $cargo)
+    {
         return view('editCargo', compact('cargo'));
     }
 
-    public function update(CargoRequest $request, Cargo $cargo) {
+    public function update(CargoRequest $request, Cargo $cargo)
+    {
         Cargo::where('id', $cargo->id)
-                -> update([
-                    'nombre_cargo' => $request->nombre_cargo
-                ]);
+            ->update([
+                'nombre_cargo' => $request->nombre_cargo
+            ]);
         return redirect('cargo');
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
         Cargo::destroy($id);
         return redirect('cargo');
     }
