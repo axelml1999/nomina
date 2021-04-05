@@ -11,6 +11,7 @@ use App\Models\Horarios;
 use App\Models\Pago;
 use App\Models\Sexo;
 use App\Models\Turno;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -94,16 +95,17 @@ class HomeController extends Controller
         return view('departamento', compact('departamentos'));
     }
 
-    public function tablados()
-    {
+    public function tablados(){
         $turnos = Turno::all();
         $cargos = Cargo::all();
         $departamentos = Departamento::all();
         $sexos = Sexo::all();
         $pagos = Pago::all();
-        $empleados = Empleado::all();
+        // $empleados = Empleado::all();
+        $empleados = Empleado:: all(); 
         return view('tablados', compact('empleados', 'sexos', 'cargos', 'turnos', 'departamentos', 'pagos'));
     }
+
 
     public function empleados()
     {
