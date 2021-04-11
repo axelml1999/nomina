@@ -57,7 +57,6 @@
             @endforeach
           </select> 
 
-          {{-- <input type="text" class="form-control" value="{{ $empleado->turno_id }}" name="turno_id"> --}}
           <br> 
           <h4>Fecha de nacimiento</h4>
           <input type="text" class="form-control" value="{{ $empleado->fecha_nacimiento }}" name="fecha_nacimiento">

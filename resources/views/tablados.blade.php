@@ -19,7 +19,6 @@
     <table id="empleados" class="table table-bordered" style="width:100%">
       <thead>
         <tr>
-          {{-- <th>ID empleado</th> --}}
           <th>Nombre</th>
           <th>Apellido paterno</th>
           <th>Apellido materno</th>
@@ -44,49 +43,28 @@
           <td>{{$empleado->curp}}</td>
           <td>{{$empleado->direccion}}</td>
           <td>{{$empleado->salario}}</td>
-          @if ($empleado->turno_id===1)
-          <td>Completo</td>
-          @endif
-          @if ($empleado->cargo_id===1)
-          <td>Gerente</td>
-          @elseif ($empleado->cargo_id===2)
-          <td>Empleado</td>
-          @elseif ($empleado->cargo_id===3)
-          <td>Cocinero</td>
-          @endif
-
-          @if ($empleado->departamento_id===1)
-          <td>Gerencia</td>
-          @elseif ($empleado->departamento_id===2)
-          <td>Cocina</td>
-          @else
-          <td>Recepción</td>
-          @endif
-
-          @if ($empleado->sexo_id===1)
-          <td>femenino</td>
-          @else
-          <td>Masculino</td>
-          @endif
-
+          <td>{{$empleado->turnos->nombre_turno}}</td>
+          <td>{{$empleado->cargos->nombre_cargo}}</td>
+          <td>{{$empleado->departamentos->nombre_dep}}</td>
+          <td>{{$empleado->sexos->tipo_sexo}}</td>
           <td>{{$empleado->fecha_nacimiento}}</td>
           <form method="POST" action="{{ url('/tablados/'.$empleado->id) }}">
             @csrf
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
-            <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
+            <td>
+              <button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button>
+            </td>
           </form>
           <td>
             <a href="{{ url('tablados/'.$empleado->id) }}">
               <button type="button" class="btn btn-success">Editar</button>
             </a>
           </td>
-
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
-
 </div>
 @endsection
