@@ -5,19 +5,8 @@
   <div class="container1">
     <h1>Reporte Nómina General</h1>
   </div>
-
-
-  <form action="" class="form-inline pt-4">
-
-    <div class="form-group d-flex">
-
-      <input type="number" class="form-control" placeholder="Ingrese número de empleado">
-      <button type="submit" class="btn btn-dark ml-auto">Buscar</button>
-    </div>
-
 </div>
 
-</form>
 <br>
 
 <!-- Optional JavaScript; choose one of the two! -->
@@ -35,26 +24,19 @@
   <table id="nomina-general" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
-        <th>id</th>
         <th>Semana</th>
         <th>Fecha inicio</th>
         <th>Fecha fin</th>
-        <th>Total descuentos</th>
-        <th>Total extras</th>
-        <th>Total nomina</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
 
       @foreach ($general as $item)
       <tr>
-        <td>{{$item->id}}</td>
         <td>{{$item->semana}}</td>
         <td>{{$item->fecha_inicio}}</td>
         <td>{{$item->fecha_fin}}</td>
-        <td>{{$item->total_descuentos}}</td>
-        <td>{{$item->total_extras}}</td>
-        <td>{{$item->total_nomina}}</td>
 
         <form method="POST" action="{{ url('/nominageneral/' . $item->id) }}">
           @csrf

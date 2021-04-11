@@ -32,7 +32,7 @@
       -->
 
 <div class="container">
-  <table id="nomina-individual" class="table table-bordered" style="width:100%">
+  <!-- <table id="nomina-individual" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
         <th></th>
@@ -57,7 +57,7 @@
       </tr>
       @endforeach
     </tbody>
-  </table>
+  </table> -->
 
 
   <a type="submit" class="btn btn-primary" href="individual">GENERAR +</a>

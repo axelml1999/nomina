@@ -26,12 +26,9 @@ class NominasGeneraleController extends Controller
                 'semana',
                 'fecha_inicio',
                 'fecha_fin',
-                'total_nomina',
-                'total_descuentos',
-                'total_extras'
             )
-            );
-    
+        );
+
         return redirect("nominageneral");
     }
 
@@ -40,5 +37,4 @@ class NominasGeneraleController extends Controller
         NominasGenerale::destroy($id);
         return back();
     }
-
 }

@@ -18,9 +18,6 @@ class CreateNominasGeneralesTable extends Migration
             $table->integer('semana');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->decimal('total_nomina');
-            $table->decimal('total_descuentos');
-            $table->decimal('total_extras');
             $table->timestamps();
         });
     }

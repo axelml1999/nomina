@@ -24,8 +24,10 @@ class NominaIndividualRequest extends FormRequest
     public function rules()
     {
         return [
-            'empleado' => 'required',
-            'nominagen' => 'required',
+            'empleado_id' => 'required',
+            'nominagen_id' => 'required',
+            'extra_id' => 'required',
+            'descuento_id' => 'required',
             'total_nom' => 'required'
         ];
     }
@@ -33,8 +35,10 @@ class NominaIndividualRequest extends FormRequest
     public function messages()
     {
         return [
-            'empleado.required' => 'Este campo es requerido',
-            'nominagen.required' => 'Este campo es requerido',
+            'empleado_id.required' => 'Este campo es requerido',
+            'nominagen_id.required' => 'Este campo es requerido',
+            'extra_id.required' => 'Este campo es requerido',
+            'descuento_id.required' => 'Este campo es requerido',
             'total_nom.required' => 'Este campo es requerido'
         ];
     }
