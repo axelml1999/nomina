@@ -63,7 +63,6 @@
             <table id="descuentos" class="table table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Codigo</th>
                         <th>Descripcion</th>
                         <th>Valor</th>
                         <th>Editar</th>
@@ -73,10 +72,13 @@
                 <tbody>
                     @foreach ($descuentos as $descuento)
                     <tr>
-                        <td>{{ $descuento->id }}</td>
                         <td>{{ $descuento->descripcion }}</td>
                         <td>$ {{ $descuento->valor }}</td>
-                        <td><button class="btn btn-success mb-1" type="button" data-toggle="modal" data-target="#successModal">Editar</button></td>
+                        <td>
+                            <a href="{{ url('editDescuentos/'.$descuento->id) }}">
+                                <button type="button" class="btn btn-success">Editar</button>
+                            </a>
+                        </td>
                         <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
                     </tr>
                     @endforeach

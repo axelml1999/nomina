@@ -19,7 +19,6 @@ class CreateNominasIndividualesTable extends Migration
             $table->unsignedBigInteger('nominagen_id');
             $table->unsignedBigInteger('extra_id');
             $table->unsignedBigInteger('descuento_id');
-            $table->decimal('total_nom');
             $table->timestamps();
             $table->foreign('empleado_id')->references('id')->on('empleados');
             $table->foreign('nominagen_id')->references('id')->on('nominas_generales');

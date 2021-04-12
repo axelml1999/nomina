@@ -65,6 +65,10 @@
         $(document).ready(function() {
             $('#descuentos').DataTable();
         });
+
+        $(document).ready(function() {
+            $('#nominaIndividual').DataTable();
+        });
     </script>
 </body>
 

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <div class="container1">
-    <h1>Reporte Nómina General</h1>
+    <h1>Reporte de fechas</h1>
   </div>
 </div>
 
@@ -37,19 +37,36 @@
         <td>{{$item->semana}}</td>
         <td>{{$item->fecha_inicio}}</td>
         <td>{{$item->fecha_fin}}</td>
-
-        <form method="POST" action="{{ url('/nominageneral/' . $item->id) }}">
-          @csrf
-          {{ csrf_field() }}
-          {{ method_field('DELETE') }}
-          <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
-        </form>
-
+        <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
       </tr>
       @endforeach
 
     </tbody>
   </table>
   <a type="submit" class="btn btn-primary" href="general">GENERAR +</a>
+  <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-danger" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Eliminar</h4>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estas seguro que deseas eliminar el registro?</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+          <form method="POST" action="{{ url('/nominageneral/' . $item->id) }}">
+            @csrf
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+          </form>
+        </div>
+      </div>
+      <!-- /.modal-content-->
+    </div>
+    <!-- /.modal-dialog-->
+  </div>
 </div>
 @endsection

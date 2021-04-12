@@ -65,7 +65,11 @@
       <tr>
         <td>{{$cargo->id}}</td>
         <td>{{$cargo->nombre_cargo}}</td>
-        <td><button class="btn btn-success mb-1" type="button" data-toggle="modal" data-target="#successModal">Editar</button></td>
+        <td>
+          <a href="{{ url('editCargo/'.$cargo->id) }}">
+            <button type="button" class="btn btn-success">Editar</button>
+          </a>
+        </td>
         <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
       </tr>
       @endforeach

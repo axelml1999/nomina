@@ -34,8 +34,27 @@
     </div>
     <div>
       <br>
-      <button type="submit" class="btn btn-primary right action_submit">Registrar</button>
-      <input class="btn btn-outline-danger" type="reset" value="LIMPIAR">
+      <button class="btn btn-primary mb-1" type="button" data-toggle="modal" data-target="#primaryModal">Registrar</button>
+      <input class="btn btn-outline-danger" type="reset" value="Limpiar">
+    </div>
+    <div class="modal fade" id="primaryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-primary" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Insertar</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <p>¿Estas seguro que deseas insertar estos datos?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+            <button class="btn btn-primary right action_submit" type="submit" value="Registrar">Registrar</button>
+          </div>
+        </div>
+        <!-- /.modal-content-->
+      </div>
+      <!-- /.modal-dialog-->
     </div>
   </form>
 

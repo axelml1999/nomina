@@ -14,24 +14,35 @@ class NominasIndividualeController extends Controller
 {
     public function nominaIndividual()
     {
-        $individual = NominasIndividuale::all();
-        return view('nominaindividual', compact('individual'));
-    }
-
-    public function individual()
-    {
+        $nomina_individual = NominasIndividuale::all();
         $empleado = Empleado::all();
         $nom_gen = NominasGenerale::all();
         $extra = Extra::all();
         $descuento = Descuento::all();
 
-        return view('nominasIndividual', compact('empleado', 'nom_gen', 'extra', 'descuento'));
+        return view('nominaindividual', compact('nomina_individual', 'empleado', 'nom_gen', 'extra', 'descuento'));
+    }
+
+    public function individual()
+    {
+        $nomina_individual = NominasIndividuale::all();
+        $empleado = Empleado::all();
+        $nom_gen = NominasGenerale::all();
+        $extra = Extra::all();
+        $descuento = Descuento::all();
+
+        return view('nominasIndividual', compact('nomina_individual', 'empleado', 'nom_gen', 'extra', 'descuento'));
     }
 
     public function registroIndividual(NominaIndividualRequest $request)
     {
         NominasIndividuale::create(
-            $request->only('empleado_id', 'nominagen_id', 'extra_id', 'descuento_id', 'total_nom')
+            [
+                "empleado_id" => $request->empleado_id,
+                "nominagen_id" => $request->nominagen_id,
+                "extra_id" => $request->extra_id,
+                "descuento_id" => $request->descuento_id
+            ]
         );
 
         return redirect('nominaindividual');

@@ -27,8 +27,7 @@ class NominaIndividualRequest extends FormRequest
             'empleado_id' => 'required',
             'nominagen_id' => 'required',
             'extra_id' => 'required',
-            'descuento_id' => 'required',
-            'total_nom' => 'required'
+            'descuento_id' => 'required'
         ];
     }
 
@@ -38,8 +37,7 @@ class NominaIndividualRequest extends FormRequest
             'empleado_id.required' => 'Este campo es requerido',
             'nominagen_id.required' => 'Este campo es requerido',
             'extra_id.required' => 'Este campo es requerido',
-            'descuento_id.required' => 'Este campo es requerido',
-            'total_nom.required' => 'Este campo es requerido'
+            'descuento_id.required' => 'Este campo es requerido'
         ];
     }
 }

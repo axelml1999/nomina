@@ -13,6 +13,25 @@ class NominasIndividuale extends Model
         'nominagen_id',
         'extra_id',
         'descuento_id',
-        'total_nom'
     ];
+
+    public function extras()
+    {
+        return $this->belongsTo('App\Models\Extra', 'extra_id');
+    }
+
+    public function nomina_gen()
+    {
+        return $this->belongsTo('App\Models\NominasGenerale', 'nominagen_id');
+    }
+
+    public function descuentos()
+    {
+        return $this->belongsTo('App\Models\Descuento', 'descuento_id');
+    }
+
+    public function empleados()
+    {
+        return $this->belongsTo('App\Models\Empleado', 'empleado_id');
+    }
 }

@@ -64,7 +64,6 @@
             <table id="extras" class="table table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Codigo</th>
                         <th>Descripcion</th>
                         <th>Valor</th>
                         <th>Editar</th>
@@ -74,10 +73,13 @@
                 <tbody>
                     @foreach ($extras as $extra)
                     <tr>
-                        <td>{{ $extra->id }}</td>
                         <td>{{ $extra->descripcion_extra }}</td>
                         <td>$ {{ $extra->valor }}</td>
-                        <td><button class="btn btn-success mb-1" type="button" data-toggle="modal" data-target="#successModal">Editar</button></td>
+                        <td>
+                            <a href="{{ url('editExtras/'.$extra->id) }}">
+                                <button type="button" class="btn btn-success">Editar</button>
+                            </a>
+                        </td>
                         <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
                     </tr>
                     @endforeach

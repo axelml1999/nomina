@@ -3,17 +3,12 @@
 @section('content')
 <div class="container">
   <div class="container1">
-    <h1>Reporte Nómina Individual</h1>
+    <h1>Reporte de Nómina</h1>
   </div>
 
 
   <form class="form-inline pt-4">
 
-    <div class="form-group d-flex">
-
-      <input type="number" class="form-control" placeholder="Ingrese número de empleado" type="search" name="Search">
-      <button type="submit" class="btn btn-dark ml-auto">Buscar</button>
-    </div>
 
 </div>
 
@@ -32,35 +27,57 @@
       -->
 
 <div class="container">
-  <!-- <table id="nomina-individual" class="table table-bordered" style="width:100%">
+
+  <table id="nominaIndividual" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
-        <th></th>
         <th>Empleado</th>
-        <th>Nomina General</th>
-        <th>Total Nomina</th>
+        <th>Semana</th>
+        <th>Extras</th>
+        <th>Descuentos</th>
+        <th>Total</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($individual as $item)
+      @foreach($nomina_individual as $nom)
       <tr>
-        <td>{{$item->id}}</td>
-        <td>{{$item->empleado}}</td>
-        <td>{{$item->nominagen}}</td>
-        <td>{{$item->total_nom}}</td>
-        <form method="POST" action="{{ url('/nominaIndividual/' . $item->id) }}">
-          @csrf
-          {{ csrf_field() }}
-          {{ method_field('DELETE') }}
-          <td><button type="submit" onclick="return confirm ('¿Eliminar?')" class="btn btn-danger">Eliminar</button></td>
-        </form>
+        <td>{{$nom->empleados->nombre}}</td>
+        <td>{{$nom->nomina_gen->semana}}</td>
+        <td>{{$nom->extras->descripcion_extra}}</td>
+        <td>{{$nom->descuentos->descripcion}}</td>
+        <td>{{$nom->empleados->salario + $nom->extras->valor - $nom->descuentos->valor}}</td>
+        <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
       </tr>
       @endforeach
     </tbody>
-  </table> -->
+  </table>
 
-
-  <a type="submit" class="btn btn-primary" href="individual">GENERAR +</a>
+  <a type="submit" class="btn btn-primary mt-4" href="individual">GENERAR +</a>
+  <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-danger" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Eliminar</h4>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estas seguro que deseas eliminar el registro?</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+          <form method="POST" action="{{ url('/nominaIndividual/' . $nom->id) }}">
+            @csrf
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+          </form>
+        </div>
+      </div>
+      <!-- /.modal-content-->
+    </div>
+    <!-- /.modal-dialog-->
+  </div>
 </div>
 
 @endsection
