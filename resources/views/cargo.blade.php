@@ -54,7 +54,6 @@
   <table id="cargos" class="table table-bordered" style="width:100%">
     <thead>
       <tr>
-        <th>Id</th>
         <th>Cargo</th>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -63,7 +62,6 @@
     <tbody>
       @foreach ($cargos as $cargo)
       <tr>
-        <td>{{$cargo->id}}</td>
         <td>{{$cargo->nombre_cargo}}</td>
         <td>
           <a href="{{ url('editCargo/'.$cargo->id) }}">

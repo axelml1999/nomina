@@ -41,7 +41,7 @@
         <br>
       </div>
       <div class="col-6">
-        <h4>turno</h4>
+        <h4>Turno</h4>
         <select name="turno_id" class="form-control">
           @foreach ($turnos as $turno)
           <option value="{{ $turno['id'] }}">{{ $turno['nombre_turno'] }}</option>
@@ -49,7 +49,7 @@
         </select>
         <br>
         <h4>Fecha de nacimiento</h4>
-        <input type="text" class="form-control" placeholder="fecha_nacimiento" name="fecha_nacimiento">
+        <input type="text" class="form-control" placeholder="AAAA/MM/DD" name="fecha_nacimiento">
         <br>
         <h4>Cargo</h4>
         <select name="cargo_id" class="form-control">

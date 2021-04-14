@@ -46,7 +46,7 @@
         <td>{{$nom->nomina_gen->semana}}</td>
         <td>{{$nom->extras->descripcion_extra}}</td>
         <td>{{$nom->descuentos->descripcion}}</td>
-        <td>{{$nom->empleados->salario + $nom->extras->valor - $nom->descuentos->valor}}</td>
+        <td>$ {{$nom->empleados->salario + $nom->extras->valor - $nom->descuentos->valor}}</td>
         <td><button class="btn btn-danger mb-1" type="button" data-toggle="modal" data-target="#dangerModal">Eliminar</button></td>
       </tr>
       @endforeach
