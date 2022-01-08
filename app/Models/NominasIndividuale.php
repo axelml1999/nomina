@@ -15,6 +15,11 @@ class NominasIndividuale extends Model
         'descuento_id',
     ];
 
+    public function empleados()
+    {
+        return $this->belongsTo('App\Models\Empleado', 'empleado_id');
+    }
+    
     public function extras()
     {
         return $this->belongsTo('App\Models\Extra', 'extra_id');
@@ -30,8 +35,4 @@ class NominasIndividuale extends Model
         return $this->belongsTo('App\Models\Descuento', 'descuento_id');
     }
 
-    public function empleados()
-    {
-        return $this->belongsTo('App\Models\Empleado', 'empleado_id');
-    }
 }
